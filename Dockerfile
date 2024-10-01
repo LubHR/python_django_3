@@ -13,7 +13,7 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
     COLUMNS=80
 
 RUN apk update
-RUN apk --no-cache gcc muls-dev maridb-dev curl
+RUN apk add --no-cache gcc musl-dev mariadb-dev curl
 
 RUN mkdir /app
 WORKDIR /app
@@ -24,4 +24,6 @@ ENV PATH=$POETRY_HOME/bin:$PATH
 
 COPY pyproject.toml poetry.lock /app/
 
-RUN poetry config virtualenvs.create false && poetry install --no-ansi
+RUN poetry config virtualenvs.create false
+RUN poetry lock
+RUN poetry install

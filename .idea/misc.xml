@@ -3,5 +3,5 @@
   <component name="Black">
     <option name="sdkName" value="Python 3.12 (python_django_3)" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="Poetry (python_django_3)" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="Remote Python 3.12.6 Docker Compose (app)" project-jdk-type="Python SDK" />
 </project>
