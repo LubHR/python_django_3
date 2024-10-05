@@ -1,4 +1,4 @@
-from datetime import time
+import time
 
 from django.core.management import BaseCommand
 from django.db import OperationalError, connection
