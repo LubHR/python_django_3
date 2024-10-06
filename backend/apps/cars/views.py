@@ -12,7 +12,7 @@ from apps.cars.serializer import CarPhotoSerializer, CarSerializer
 
 class CarListCreateView(ListCreateAPIView):
     serializer_class = CarSerializer
-    queryset = CarModel.objects.all
+    queryset = CarModel.objects.all()
     permission_classes = (IsAuthenticated,)
 
 
