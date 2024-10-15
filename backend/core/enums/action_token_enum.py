@@ -8,9 +8,14 @@ class ActionTokenEnum(Enum):
         timedelta(minutes=30),
     )
 
-    RECOVERY_PASSWORD=(
+    RECOVERY_PASSWORD = (
         'recovery_password',
         timedelta(minutes=10),
+    )
+
+    SOCKET = (
+        'socket',
+        timedelta(seconds=20),
     )
 
     def __init__(self, token_type, lifetime):
