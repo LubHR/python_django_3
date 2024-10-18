@@ -39,9 +39,10 @@ const Chat = () => {
         if (e.key === 'Enter') {
             socketClient.send(JSON.stringify({
                 data: e.target.value,
-                action: 'sendMessage',
+                action: 'send_message',
                 request_id: new Date().getTime(),
             }))
+            e.target.value = '';
         }
     }
 

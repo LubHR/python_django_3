@@ -1,12 +1,13 @@
 import {authService} from "./authService";
 import {w3cwebsocket as W3cwebsocket} from 'websocket';
 
-const baseUrl = "ws://localhost:81/api";
+const baseURL = "ws://localhost:81/api";
 
 const socketService = async () => {
     const {data: {token}} = await authService.getSocketToken()
     return {
-        chat: (room) => new W3cwebsocket(`${baseUrl}/chat/${room}/?token=${token}`),
+        chat: (room) => new W3cwebsocket(`${baseURL}/chat/${room}/?token=${token}`),
+        cars: () => new W3cwebsocket(`${baseURL}/cars/?token=${token}`),
     };
 }
 
